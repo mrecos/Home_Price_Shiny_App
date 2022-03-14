@@ -1,0 +1,13 @@
+name: Housing_Prediction_Demo
+title: Housing_Prediction_Demo
+username:
+account: matthew-harris
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5776658
+bundleId: 5639639
+url: https://matthew-harris.shinyapps.io/Housing_Prediction_Demo/
+when: 1646347315.86877
+lastSyncTime: 1646347315.86878
+asMultiple: FALSE
+asStatic: FALSE
