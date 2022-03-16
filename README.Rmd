@@ -21,7 +21,7 @@ The application code here is for an app that uses a model trained and
 hosted on DataRobot to power predictions in a map-based Shiny
 application.
 
-!["screenshot of application"](app_screenshot.png)
+!["screenshot of application"](app_screenshotV2.png)
 
 
 
