@@ -37,6 +37,13 @@ response <- POST(URL,
                  httr::content_type_json(),
                  authenticate(USERNAME, API_TOKEN, type = "basic"))
 httr::content(response, simplifyVector=TRUE)
+
+pred_exp <- POST(URL_predex,
+                 body = rjson::toJSON(unname(split(dat[1,], 1:1))),
+                 add_headers("datarobot-key" = DATAROBOT_KEY),
+                 httr::content_type_json(),
+                 authenticate(USERNAME, API_TOKEN, type = "basic"))
+httr::content(pred_exp, simplifyVector=TRUE)
 #################
 
 get_pred <- function(Latitude,Longitude,qualityCodeDscr,carStorageSF,
