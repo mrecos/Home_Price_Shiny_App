@@ -98,6 +98,7 @@ get_pred_exp <- function(Latitude,Longitude,qualityCodeDscr,carStorageSF,
   )
   response_content <- fromJSON(content(response, "text", encoding = "UTF-8"), 
                                simplifyVector=TRUE)
+  cat(response$times,"\n")
   pred_price <- response_content$data$prediction
   pred_exp   <- response_content$data$predictionExplanations[[1]]
   return(list(pred_price = pred_price, 

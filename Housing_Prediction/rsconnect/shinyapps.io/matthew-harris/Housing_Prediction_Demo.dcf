@@ -5,9 +5,9 @@ account: matthew-harris
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5776658
-bundleId: 5639639
+bundleId: 5692859
 url: https://matthew-harris.shinyapps.io/Housing_Prediction_Demo/
-when: 1646347315.86877
-lastSyncTime: 1646347315.86878
+when: 1647461245.97639
+lastSyncTime: 1647461245.97641
 asMultiple: FALSE
 asStatic: FALSE
