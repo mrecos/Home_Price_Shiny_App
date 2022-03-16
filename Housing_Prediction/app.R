@@ -23,11 +23,12 @@ quality_codes <- c("EXCEPTIONAL 1 ","EXCELLENT++ ", "EXCELLENT ","VERY GOOD ++ "
 ## API
 source("keys.r")
 API_URL       <- "https://cfds-ccm-prod.orm.datarobot.com"
-API_TOKEN     <-  API_TOKEN #'YOUR API TOKEN'
+API_TOKEN     <-  API_TOKEN     #'YOUR API TOKEN'
 DATAROBOT_KEY <-  DATAROBOT_KEY #'YOUR DATAROBOT KEY'
-USERNAME      <-  USERNAME #"YOUR USE NAME"
+USERNAME      <-  USERNAME      #"YOUR USE NAME"
 DEPLOYMENT_ID <- '62202e003b4a705bda0f62ee'
 URL <- paste0(API_URL, "/predApi/v1.0/deployments/", DEPLOYMENT_ID, "/predictions")
+URL_predex <- paste0(API_URL, "/predApi/v1.0/deployments/", DEPLOYMENT_ID, "/predictionExplanations")
 
 ### test API ####
 response <- POST(URL,
