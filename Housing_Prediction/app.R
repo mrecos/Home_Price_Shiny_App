@@ -49,32 +49,6 @@ pred_exp <- POST(URL_predex,
 httr::content(pred_exp, simplifyVector=TRUE)
 #################
 
-# get_pred <- function(Latitude,Longitude,qualityCodeDscr,carStorageSF,
-#                      nbrBedRoom, TotalFinishedSF){
-#   ## quick model to estimate mainfloor from finished
-#   mainfloorSF_lm <- lm(mainfloorSF ~ TotalFinishedSF, data = dat)
-#   mainfloorSF <- predict(mainfloorSF_lm,
-#                          data.frame(TotalFinishedSF = TotalFinishedSF))
-#   ####
-#   predictions <- dat[1,] 
-#   predictions$id  <- 1
-#   predictions$Latitude <- Latitude
-#   predictions$Longitude <- Longitude
-#   predictions$qualityCodeDscr  <- qualityCodeDscr
-#   predictions$carStorageSF <- carStorageSF
-#   predictions$year <- 2020 
-#   predictions$nbrBedRoom <- nbrBedRoom
-#   predictions$mainfloorSF <- mainfloorSF # prediction
-#   predictions$TotalFinishedSF <- TotalFinishedSF
-#   response <- POST(URL, 
-#                    body = rjson::toJSON(unname(split(predictions, 1:nrow(predictions)))),
-#                    add_headers("datarobot-key" = DATAROBOT_KEY),
-#                    httr::content_type_json(),
-#                    authenticate(USERNAME, API_TOKEN, type = "basic")
-#   )
-#   data <- fromJSON(content(response, "text", encoding = "UTF-8"), simplifyVector=FALSE)$data[[1]]$prediction
-#   return(data)
-# }
 get_pred_exp <- function(Latitude,Longitude,qualityCodeDscr,carStorageSF,
                      nbrBedRoom, TotalFinishedSF){
   ## quick model to estimate mainfloor from finished
